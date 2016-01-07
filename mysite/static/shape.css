@@ -1,0 +1,28 @@
+h1 {
+    font-weight: normal;
+    color: #FCA205;
+    font-size: 50px;
+    font-style: italic;
+    line-height: 20px;
+    font-family: fantasy;
+}
+input
+{
+  -moz-border-radius: 15px;
+ border-radius: 5px;
+    border:groove 1px goldenrod;
+    padding:10px;
+    font-family: fantasy;
+
+}
+select
+{
+  -moz-border-radius: 15px;
+ border-radius: 5px;
+    border:groove 1px blueviolet;
+    padding:10px;
+
+}
+td {
+    padding: 5px;
+}
