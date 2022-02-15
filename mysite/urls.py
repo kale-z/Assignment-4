@@ -13,18 +13,18 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.urls import re_path
 from django.contrib import admin
 from mysite.views import *
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^addastudent/$',addastudent),
-    url(r'^all-students/$',all_students),
-    url(r'^addateacher/$',addateacher),
-    url(r'^all-teachers/$',all_teachers),
-    url(r'^addacourse/$',addacourse),
-    url(r'^all-courses/$',all_courses),
-    url(r'^enrollstudents/$',enrollstudents),
-    url(r'^enrolledstudents/(\d+)$',enrolledstudents),
+    re_path(r'^admin/', admin.site.urls),
+    re_path(r'^addastudent/$',addastudent),
+    re_path(r'^all-students/$',all_students),
+    re_path(r'^addateacher/$',addateacher),
+    re_path(r'^all-teachers/$',all_teachers),
+    re_path(r'^addacourse/$',addacourse),
+    re_path(r'^all-courses/$',all_courses),
+    re_path(r'^enrollstudents/$',enrollstudents),
+    re_path(r'^enrolledstudents/(\d+)$',enrolledstudents),
 
 ]

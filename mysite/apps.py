@@ -4,4 +4,4 @@ from django.apps import AppConfig
 
 
 class EsadunalConfig(AppConfig):
-    name = 'khaledsaleh'
+    name = 'mysite'

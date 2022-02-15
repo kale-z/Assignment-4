@@ -22,5 +22,5 @@ class Course(models.Model):
     code = models.CharField(max_length=10)
     classroom = models.CharField(max_length=25)
     time = models.CharField(max_length=100)
-    teacher = models.ForeignKey(Teacher)
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
     students = models.ManyToManyField(Student)

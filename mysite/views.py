@@ -1,9 +1,7 @@
 from django.shortcuts import render
 from mysite.forms import *
 from mysite.models import *
-from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
-from django.template import RequestContext
 
 def addastudent(request):
     if request.method == 'POST':
@@ -16,11 +14,11 @@ def addastudent(request):
             return HttpResponseRedirect('/all-students/')
     else:
         form = StudentForm()
-        return render_to_response('addastudent.html', {'form': form}, RequestContext(request))
+        return render(request, 'addastudent.html', {'form': form, 'title': 'StudentForm'})
 
 
 def all_students(request):
-    return render_to_response('studentslist.html',{'student_list': Student.objects.all()})
+    return render(request, 'studentslist.html',{'student_list': Student.objects.all(), 'title': 'Students'})
 
 
 def addateacher(request):
@@ -36,11 +34,11 @@ def addateacher(request):
             return HttpResponseRedirect('/all-teachers/')
     else:
         form = TeacherForm()
-        return render_to_response('addateacher.html', {'form': form}, RequestContext(request))
+        return render(request, 'addateacher.html', {'form': form, 'title': 'TeacherForm'})
 
 
 def all_teachers(request):
-    return render_to_response('teacherslist.html',{'teacher_list': Teacher.objects.all()})
+    return render(request, 'teacherslist.html',{'teacher_list': Teacher.objects.all(), 'title': 'Teacher'})
 
 def addacourse(request):
     if request.method == 'POST':
@@ -55,11 +53,11 @@ def addacourse(request):
             return HttpResponseRedirect('/all-courses/')
     else:
         form = CourseForm()
-        return render_to_response('addacourse.html', {'form': form}, RequestContext(request))
+        return render(request, 'addacourse.html', {'form': form, 'title': 'CourseForm'})
 
 
 def all_courses(request):
-    return render_to_response('courseslist.html',{'course_list': Course.objects.all()})
+    return render(request, 'courseslist.html',{'course_list': Course.objects.all(), 'title': 'Course'})
 
 
 def enrollstudents(request):
@@ -71,8 +69,8 @@ def enrollstudents(request):
             return HttpResponseRedirect('/enrolledstudents/'+str(form.cleaned_data["course"].id))
     else:
         form = EnrollStudents()
-        return render_to_response('enrollstudents.html', {'form': form}, RequestContext(request))
+        return render(request, 'enrollstudents.html', {'form': form, 'title': 'EnrollStudentForm'})
 
 
 def enrolledstudents(request,id):
-    return render_to_response('enrolledstudents.html',{'course': Course.objects.all().filter(id=id)[0], "students": Student.objects.all()})
+    return render(request, 'enrolledstudents.html',{'course': Course.objects.all().filter(id=id)[0], "students": Student.objects.all(), 'title': 'EnrolledStudents'})

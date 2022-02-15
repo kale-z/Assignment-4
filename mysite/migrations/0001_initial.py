@@ -43,6 +43,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='book',
             name='publisher',
-            field=models.ForeignKey(to='mysite.Publisher'),
+            field=models.ForeignKey(to='mysite.Publisher', on_delete=models.CASCADE),
         ),
     ]
