@@ -2,6 +2,8 @@
 This is my fourth Django practice intending to simulate a university's courses registration system. 
 
 
+<br>
+
 ## Getting Started
 This project includes the following functions:
 
@@ -14,12 +16,18 @@ This project includes the following functions:
 - Display all Students
 - Display all Enrolled Students
 
+
+<br>
+
 ## Screenshot
 Below an example of how the interface of a form looks like:
 
 <p align="center">
   <img src="/screenshots/add-teacher.png">
 </p>
+
+
+<br>
 
 ## Usage
 To run this project after cloning, run the following command first for migration
@@ -34,4 +42,3 @@ python manage.py runserver
 After running the localhost, all what's left is heading to form pages and fill them. Then, finally, going to each displaying page related to each form.
 
 _Note: after running the project locally, you may need to add the URL's slug manually from ```urls.py``` as the homepage was not set_
-
