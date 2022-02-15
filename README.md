@@ -19,15 +19,16 @@ This project includes the following functions:
 
 <br>
 
-## Screenshot
+## Screenshots
 Below an example of how the interface of a form looks like:
 
-<p align="center">
   <img src="/screenshots/add-teacher.png">
-</p>
 
 
-<br>
+And this is how it's displayed:
+
+  <img src="/screenshots/teachers-list.png">
+
 
 ## Usage
 To run this project after cloning, run the following command first for migration
