@@ -1,4 +1,4 @@
-# Django Practice [ 4 ]
+# Django Course Registration Simulator
 This is my fourth Django practice intending to simulate a university's courses registration system. 
 
 
